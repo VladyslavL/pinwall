@@ -10,7 +10,8 @@ header{
 
 		.logo{
 			text-align: center;
-			margin-top: 42px;
+			padding-top: 42px;
+			color: #fff;
 
 				i{
 					color: $blue;
@@ -22,7 +23,7 @@ header{
 				span{
 					font-weight: 200;
 					font-size: $fz39;
-					color: #fff;
+					color: inherit;
 				}
 		}
 
@@ -38,6 +39,11 @@ header{
 
 				input{
 					margin-right: 10px;
+					max-width: 430px;
+
+						&.zip{
+							max-width: 135px;
+						}
 				}
 		}
 
@@ -122,11 +128,13 @@ header{
 					color: $blue;
 					margin-bottom: 20px;
 					font-weight: 200;
+					padding: 0 10px;
 				}
 
 				p{
 					font-size: $fz22;
 					line-height: 1.4;
+					padding: 0 10px;
 				}
 		}
 }

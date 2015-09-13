@@ -1015,9 +1015,13 @@ a {
 
 a {
   color: inherit; }
-  a:hover {
+  a:hover,
+  a:active,
+  a:visited,
+  a:focus {
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    outline: none; }
 
 html {
   font-size: 16px; }
@@ -1026,7 +1030,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 200;
   line-height: 1;
-  color: #000; }
+  color: #4A4A4A; }
 
 hr {
   width: 100%;
@@ -1060,9 +1064,11 @@ hr {
   text-align: center;
   line-height: 28px; }
 
+.full_height {
+  height: 100%; }
+
 input {
   width: 100%;
-  max-width: 430px;
   height: 70px;
   background: #fff;
   font-size: 1.375rem;
@@ -1070,9 +1076,12 @@ input {
   padding-left: 20px;
   color: #9B9B9B;
   float: left;
-  border: none; }
-  input.zip {
-    max-width: 135px; }
+  border: none;
+  border: 1px solid #CDCDCD;
+  box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.5); }
+  input.no_border {
+    box-shadow: none;
+    border: none; }
 
 button {
   width: 100%;
@@ -1112,7 +1121,8 @@ header {
   color: #fff; }
   header .logo {
     text-align: center;
-    margin-top: 42px; }
+    padding-top: 42px;
+    color: #fff; }
     header .logo i {
       color: #2ac7ee;
       font-size: 2.438rem;
@@ -1120,7 +1130,7 @@ header {
     header .logo span {
       font-weight: 200;
       font-size: 2.438rem;
-      color: #fff; }
+      color: inherit; }
   header h1 {
     margin-top: 175px; }
   header form {
@@ -1129,7 +1139,10 @@ header {
     padding: 20px;
     margin-top: 40px; }
     header form input {
-      margin-right: 10px; }
+      margin-right: 10px;
+      max-width: 430px; }
+      header form input.zip {
+        max-width: 135px; }
   header nav {
     height: 100px;
     width: 100%;
@@ -1188,10 +1201,12 @@ header {
       font-size: 2.438rem;
       color: #2ac7ee;
       margin-bottom: 20px;
-      font-weight: 200; }
+      font-weight: 200;
+      padding: 0 10px; }
     .mainContent .contentBlock p {
       font-size: 1.375rem;
-      line-height: 1.4; }
+      line-height: 1.4;
+      padding: 0 10px; }
 
 /*=============================
 =            DWNLD            =
@@ -1255,5 +1270,80 @@ footer {
         footer .footerMenu.sec li a {
           font-size: 1rem;
           color: #CDCDCD; }
+
+/*===============================================
+=            STYLES FOR CATEGORYPAGE            =
+===============================================*/
+/*==============================
+=            HEADER            =
+==============================*/
+header.catpage {
+  height: 630px;
+  background-image: url(../img/categoryPage/pinwall_hero2_img_1x.jpg); }
+  header.catpage .logo {
+    background: #fff;
+    color: #000;
+    height: 130px;
+    line-height: 130px;
+    padding-top: 0; }
+  header.catpage nav {
+    bottom: auto;
+    top: 130px; }
+  header.catpage h1 {
+    margin-top: 140px; }
+
+/*========================================
+=            POPULAR PROJECTS            =
+========================================*/
+.popularProjects {
+  padding: 80px 0 110px 0; }
+  .popularProjects .largeText {
+    margin-bottom: 40px; }
+  .popularProjects .project {
+    height: 160px;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative; }
+    .popularProjects .project p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600; }
+
+/*====================================
+=            PROJECT FORM            =
+====================================*/
+.projectForm {
+  width: 100%;
+  text-align: center;
+  padding: 70px 0;
+  background: #FBFBFB; }
+  .projectForm h4 {
+    color: #2ac7ee;
+    font-size: 2.438rem;
+    margin-bottom: 20px;
+    font-weight: 200;
+    text-align: left; }
+  .projectForm p {
+    font-size: 1.375rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    text-align: left; }
+  .projectForm input {
+    margin-bottom: 20px; }
+
+/*=========================================
+=            RESPONSIVE STYLES            =
+=========================================*/
+@media screen and (max-width: 1200px) {
+  header form input {
+    max-width: 425px; } }
 
 /*# sourceMappingURL=style.css.map */
