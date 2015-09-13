@@ -1,0 +1,37 @@
+/*=====================================
+=            PRIVACYPOLICY            =
+=====================================*/
+.privacyPolicy{
+	padding: 30px 0 25px 0;
+
+		.subText{
+			color: $gray;
+			margin-bottom: 85px;
+		}
+
+		.textBlock{
+			margin-bottom: 150px;
+
+				p{
+					font-size: $fz22;
+					margin-bottom: 30px;
+					line-height: 32px;
+
+						&:last-child{
+							margin-bottom: 0;
+						}
+				}
+
+				h3{
+					font-size: $fz39;
+					margin-bottom: 10px;
+				}
+
+				h4{
+					font-size: $fz22;
+					font-weight: 600;
+					margin-bottom: 30px;
+				}
+		}
+}
+

@@ -1,0 +1,47 @@
+/*========================================
+=            OTHERPAGECONTENT            =
+========================================*/
+.otherPageContent{
+	padding: 40px 0 100px 0;
+
+	.largeText{
+		font-size: $fz39;
+	}
+
+	.subText{
+		font-weight: 600;
+		font-size: $fz22;
+	}
+
+	form{
+		padding-top: 100px;
+
+			p{
+				font-size: $fz22;
+				margin-bottom: 20px;
+				line-height: 1.4;
+			}
+
+			textarea{
+				padding-top: 20px;
+				height: 180px;
+				margin-bottom: 20px;
+			}
+
+			.clearfix{
+				float: right;
+
+					.zip{
+						width: 125px;
+						float: left;
+						margin-right: 20px;
+					}
+
+					button{
+						float: left;
+						width: 230px;
+					}
+			}
+	}
+}
+

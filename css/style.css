@@ -1043,7 +1043,7 @@ hr {
   font-size: 4.063rem;
   color: inherit;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 34px;
   font-weight: 200;
   text-align: center; }
   .largeText:before {
@@ -1067,7 +1067,8 @@ hr {
 .full_height {
   height: 100%; }
 
-input {
+input,
+textarea {
   width: 100%;
   height: 70px;
   background: #fff;
@@ -1078,10 +1079,17 @@ input {
   float: left;
   border: none;
   border: 1px solid #CDCDCD;
-  box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.5); }
-  input.no_border {
+  box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+  resize: none; }
+  input.no_border,
+  textarea.no_border {
     box-shadow: none;
     border: none; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 
 button {
   width: 100%;
@@ -1107,15 +1115,9 @@ button {
       border-right: none;
       border-left: 8px solid #fff; }
 
-/*=====================================
-=            STYLES FOR LP            =
-=====================================*/
-/*==============================
-=            HEADER            =
-==============================*/
 header {
-  height: 800px;
-  background: url(../img/LP/pinwall_hero_img_1x.jpg) center center no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   color: #fff; }
@@ -1149,7 +1151,7 @@ header {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(251, 251, 251, 0.9);
     overflow: hidden; }
     header nav ul {
       width: 100%;
@@ -1177,54 +1179,18 @@ header {
           font-size: 1.188rem;
           color: #9B9B9B;
           font-weight: 300; }
+  header.altheader {
+    padding-bottom: 100px; }
+    header.altheader .logo {
+      background: #fff;
+      color: #000;
+      height: 130px;
+      line-height: 130px;
+      padding-top: 0; }
+    header.altheader nav {
+      bottom: auto;
+      top: 130px; }
 
-/*===================================
-=            MAINCONTENT            =
-===================================*/
-.mainContent {
-  padding-top: 110px;
-  padding-bottom: 80px; }
-  .mainContent hr {
-    margin-top: 85px; }
-  .mainContent .contentBlock {
-    width: 100%;
-    height: auto;
-    display: table;
-    margin-top: 80px; }
-    .mainContent .contentBlock .dtc {
-      display: table-cell;
-      width: 50%;
-      vertical-align: middle; }
-      .mainContent .contentBlock .dtc.imgBlock {
-        text-align: center; }
-    .mainContent .contentBlock h4 {
-      font-size: 2.438rem;
-      color: #2ac7ee;
-      margin-bottom: 20px;
-      font-weight: 200;
-      padding: 0 10px; }
-    .mainContent .contentBlock p {
-      font-size: 1.375rem;
-      line-height: 1.4;
-      padding: 0 10px; }
-
-/*=============================
-=            DWNLD            =
-=============================*/
-.dwnld {
-  display: table;
-  width: 100%;
-  height: 680px;
-  background: url(../img/LP/pinwall_mobileWeb_img.jpg) center center no-repeat;
-  background-size: cover; }
-  .dwnld .dtc {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center; }
-
-/*==============================
-=            FOOTER            =
-==============================*/
 footer {
   background: #fff;
   padding: 125px 0; }
@@ -1270,6 +1236,63 @@ footer {
         footer .footerMenu.sec li a {
           font-size: 1rem;
           color: #CDCDCD; }
+  footer.altfooter {
+    padding: 35px 0 55px 0;
+    background: #FBFBFB; }
+
+/*=====================================
+=            STYLES FOR LP            =
+=====================================*/
+/*==============================
+=            HEADER            =
+==============================*/
+header.lp {
+  height: 800px;
+  background-image: url(../img/LP/pinwall_hero_img_1x.jpg); }
+
+/*===================================
+=            MAINCONTENT            =
+===================================*/
+.mainContent {
+  padding-top: 110px;
+  padding-bottom: 80px; }
+  .mainContent hr {
+    margin-top: 85px; }
+  .mainContent .contentBlock {
+    width: 100%;
+    height: auto;
+    display: table;
+    margin-top: 80px; }
+    .mainContent .contentBlock .dtc {
+      display: table-cell;
+      width: 50%;
+      vertical-align: middle; }
+      .mainContent .contentBlock .dtc.imgBlock {
+        text-align: center; }
+    .mainContent .contentBlock h4 {
+      font-size: 2.438rem;
+      color: #2ac7ee;
+      margin-bottom: 20px;
+      font-weight: 200;
+      padding: 0 10px; }
+    .mainContent .contentBlock p {
+      font-size: 1.375rem;
+      line-height: 1.4;
+      padding: 0 10px; }
+
+/*=============================
+=            DWNLD            =
+=============================*/
+.dwnld {
+  display: table;
+  width: 100%;
+  height: 680px;
+  background: url(../img/LP/pinwall_mobileWeb_img.jpg) center center no-repeat;
+  background-size: cover; }
+  .dwnld .dtc {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
 
 /*===============================================
 =            STYLES FOR CATEGORYPAGE            =
@@ -1277,19 +1300,10 @@ footer {
 /*==============================
 =            HEADER            =
 ==============================*/
-header.catpage {
+header.cp {
   height: 630px;
   background-image: url(../img/categoryPage/pinwall_hero2_img_1x.jpg); }
-  header.catpage .logo {
-    background: #fff;
-    color: #000;
-    height: 130px;
-    line-height: 130px;
-    padding-top: 0; }
-  header.catpage nav {
-    bottom: auto;
-    top: 130px; }
-  header.catpage h1 {
+  header.cp h1 {
     margin-top: 140px; }
 
 /*========================================
@@ -1338,6 +1352,84 @@ header.catpage {
     text-align: left; }
   .projectForm input {
     margin-bottom: 20px; }
+
+/*=============================================
+=            STYLES FOR OTHER PAGE            =
+=============================================*/
+/*========================================
+=            OTHERPAGECONTENT            =
+========================================*/
+.otherPageContent {
+  padding: 40px 0 100px 0; }
+  .otherPageContent .largeText {
+    font-size: 2.438rem; }
+  .otherPageContent .subText {
+    font-weight: 600;
+    font-size: 1.375rem; }
+  .otherPageContent form {
+    padding-top: 100px; }
+    .otherPageContent form p {
+      font-size: 1.375rem;
+      margin-bottom: 20px;
+      line-height: 1.4; }
+    .otherPageContent form textarea {
+      padding-top: 20px;
+      height: 180px;
+      margin-bottom: 20px; }
+    .otherPageContent form .clearfix {
+      float: right; }
+      .otherPageContent form .clearfix .zip {
+        width: 125px;
+        float: left;
+        margin-right: 20px; }
+      .otherPageContent form .clearfix button {
+        float: left;
+        width: 230px; }
+
+/*===============================================
+=            STYLES FOR SUCCESS PAGE            =
+===============================================*/
+/*======================================
+=            SUCCESSCONTENT            =
+======================================*/
+.successContent {
+  padding: 55px 0 250px 0;
+  text-align: center; }
+  .successContent .largeText:before {
+    background: #9ADC34; }
+  .successContent .successImg {
+    margin: 30px 0 65px 70px; }
+  .successContent .successText {
+    font-size: 1.375rem;
+    line-height: 1.3;
+    color: #9B9B9B; }
+
+/*===============================================
+=            STYLES FOR ARTICLE PAGE            =
+===============================================*/
+/*=====================================
+=            PRIVACYPOLICY            =
+=====================================*/
+.privacyPolicy {
+  padding: 30px 0 25px 0; }
+  .privacyPolicy .subText {
+    color: #9B9B9B;
+    margin-bottom: 85px; }
+  .privacyPolicy .textBlock {
+    margin-bottom: 150px; }
+    .privacyPolicy .textBlock p {
+      font-size: 1.375rem;
+      margin-bottom: 30px;
+      line-height: 32px; }
+      .privacyPolicy .textBlock p:last-child {
+        margin-bottom: 0; }
+    .privacyPolicy .textBlock h3 {
+      font-size: 2.438rem;
+      margin-bottom: 10px; }
+    .privacyPolicy .textBlock h4 {
+      font-size: 1.375rem;
+      font-weight: 600;
+      margin-bottom: 30px; }
 
 /*=========================================
 =            RESPONSIVE STYLES            =
