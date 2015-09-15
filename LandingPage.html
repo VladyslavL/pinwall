@@ -19,6 +19,23 @@
 			</a>
 		</div>
 		<!-- end logo -->
+
+		<div class="menu_toggle_button">
+			<i class="icon icon_hamburger_menu"></i>
+			<i class="icon icon_hamburger_menu_close"></i>
+		</div>
+		<!-- end menu_toggle_button -->
+
+		<nav>
+			<ul>
+				<li><a href="#"><i class="icon icon_pinwall_house_icon"></i><span>Home</span></a></li>
+				<li><a href="#"><i class="icon icon_pinwall_balloon_icon"></i><span>Events</span></a></li>
+				<li><a href="#"><i class="icon icon_pinwall_book_icon"></i><span>Lessons</span></a></li>
+				<li><a href="#"><i class="icon icon_pinwall_heart_icon"></i><span>Wellness</span></a></li>
+				<li><a href="#"><i class="icon icon_pinwall_more_icon"></i><span>More</span></a></li>
+			</ul>
+		</nav>
+		<!-- end nav -->
 		
 		<div class="container">
 			<div class="row">
@@ -28,25 +45,30 @@
 				</div>
 
 				<div class="col-lg-10 col-lg-offset-1">
-					<form>
-						<input type="text" placeholder="What service do you need?" class="no_border">
-						<input type="number" placeholder="ZIP code" class="no_border zip">
-						<button><span>Get started</span></button>
+					<form class="small_form" id="lp_form">
+						<div class="DropDown">
+							<div class="currentItem">What service do you need?</div>
+
+							<ul class="ddlist">
+								<li>
+									<p>Lorem ipsum dolor.</p>
+								</li>
+								<li>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</li>
+								<li>
+									<p>Sit amet, consectetur adipisicing elit.</p>
+								</li>
+							</ul>
+						</div>
+						<!-- <input type="text" name="zip" placeholder="ZIP code" class="no_border zip"> -->
+						<button name="ok"><span>Get started</span></button>
 						<div class="clearfix"></div>
+						<p class="errorText">Currently we’re operating only in Berlin. <a href="#">Sign up</a> if you want to know when we’re serve your area too.</p>
 					</form>
 				</div>
 
 				<div class="clearfix"></div>
-
-				<nav>
-					<ul>
-						<li><a href="#"><i class="icon icon_pinwall_house_icon"></i><span>Home</span></a></li>
-						<li><a href="#"><i class="icon icon_pinwall_balloon_icon"></i><span>Events</span></a></li>
-						<li><a href="#"><i class="icon icon_pinwall_book_icon"></i><span>Lessons</span></a></li>
-						<li><a href="#"><i class="icon icon_pinwall_heart_icon"></i><span>Wellness</span></a></li>
-						<li><a href="#"><i class="icon icon_pinwall_more_icon"></i><span>More</span></a></li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 	</header>
@@ -78,9 +100,16 @@
 							<img src="img/LP/pinwall_compare_img.png">
 						</div>
 
-						<div class="dtc">
+						<div class="dtc pl">
 							<h4>Compare professionals</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. </p>
+							<div class="iconsWrap">
+								<div class="icon"><img src="img/LP/compare_icons/message.png" alt=""></div>
+								<div class="icon"><img src="img/LP/compare_icons/quote.png" alt=""></div>
+								<div class="icon"><img src="img/LP/compare_icons/reviews.png" alt=""></div>
+								<div class="icon"><img src="img/LP/compare_icons/profile.png" alt=""></div>
+								<div class="icon"><img src="img/LP/compare_icons/contact.png" alt=""></div>
+							</div>
 						</div>
 					</div>
 					<!-- end contentBlock -->
@@ -109,6 +138,11 @@
 					<div class="col-lg-12">
 						<h2 class="largeText">Donec facilisis tortor ut augue lacinia, at viverra est semper.</h2>
 						<p class="subText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</p>
+
+						<div class="buttons">
+							<a href="#"><img src="img/LP/pinwall_app_store_icon.png" alt=""></a>
+							<a href="#"><img src="img/LP/pinwall_google_play_icon.png" alt=""></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -150,7 +184,9 @@
 	</footer>
 	<!-- end footer -->
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/retina.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

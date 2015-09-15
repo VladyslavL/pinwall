@@ -23,9 +23,6 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon_pinwall_balloon_icon:before {
-	content: "\e606";
-}
 .icon_checkmark:before {
 	content: "\e600";
 }
@@ -43,4 +40,13 @@
 }
 .icon_pinwall_more_icon:before {
 	content: "\e605";
+}
+.icon_pinwall_balloon_icon:before {
+	content: "\e606";
+}
+.icon_hamburger_menu_close:before {
+	content: "\e607";
+}
+.icon_hamburger_menu:before {
+	content: "\e608";
 }

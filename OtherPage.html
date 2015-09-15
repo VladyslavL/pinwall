@@ -20,6 +20,12 @@
 		</div>
 		<!-- end logo -->
 
+		<div class="menu_toggle_button">
+			<i class="icon icon_hamburger_menu"></i>
+			<i class="icon icon_hamburger_menu_close"></i>
+		</div>
+		<!-- end menu_toggle_button -->
+
 		<nav>
 			<ul>
 				<li><a href="#"><i class="icon icon_pinwall_house_icon"></i><span>Home</span></a></li>
@@ -42,11 +48,11 @@
 				</div>
 
 				<div class="col-lg-8 col-lg-offset-2">
-					<form>
+					<form class="otherform">
 						<p>Why don’t you go describe it here, and we’ll have a go at finding the right person to help you out!</p>
-						<textarea placeholder="Just a few words..."></textarea>
+						<textarea placeholder="Just a few words..." name="jafw"></textarea>
 						<div class="clearfix">
-							<input type="number" class="zip" placeholder="ZIP code">
+							<input type="text" class="zip" name="zip" placeholder="ZIP code">
 							<button><span>Help me out</span></button>
 						</div>
 					</form>
@@ -90,7 +96,10 @@
 	</footer>
 	<!-- end footer -->
 
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/retina.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

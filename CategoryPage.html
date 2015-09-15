@@ -20,6 +20,23 @@
 		</div>
 		<!-- end logo -->
 
+		<div class="menu_toggle_button">
+			<i class="icon icon_hamburger_menu"></i>
+			<i class="icon icon_hamburger_menu_close"></i>
+		</div>
+		<!-- end menu_toggle_button -->
+
+		<nav>
+			<ul>
+				<li><a href="#"><i class="icon icon_pinwall_house_icon"></i><span>Home</span></a></li>
+				<li><a href="#"><i class="icon icon_pinwall_balloon_icon"></i><span>Events</span></a></li>
+				<li><a href="#"><i class="icon icon_pinwall_book_icon"></i><span>Lessons</span></a></li>
+				<li><a href="#"><i class="icon icon_pinwall_heart_icon"></i><span>Wellness</span></a></li>
+				<li><a href="#"><i class="icon icon_pinwall_more_icon"></i><span>More</span></a></li>
+			</ul>
+		</nav>
+		<!-- end nav -->
+
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -28,25 +45,28 @@
 				</div>
 
 				<div class="col-lg-10 col-lg-offset-1">
-					<form>
-						<input type="text" placeholder="What service do you need?" class="no_border">
-						<input type="number" placeholder="ZIP code" class="no_border zip">
-						<button><span>Get started</span></button>
+					<form id="small_form" class="small_form">
+						<div class="DropDown">
+							<div class="currentItem">What service do you need?</div>
+
+							<ul class="ddlist">
+								<li>
+									<p>Lorem ipsum dolor.</p>
+								</li>
+								<li>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</li>
+								<li>
+									<p>Sit amet, consectetur adipisicing elit.</p>
+								</li>
+							</ul>
+						</div>
+						<input type="text" name="zip" placeholder="ZIP code" class="no_border zip">
+						<button name="ok"><span>Get started</span></button>
 						<div class="clearfix"></div>
+						<p class="errorText">Currently we’re operating only in Berlin. <a href="#">Sign up</a> if you want to know when we’re serve your area too.</p>
 					</form>
 				</div>
-
-				<div class="clearfix"></div>
-
-				<nav>
-					<ul>
-						<li><a href="#"><i class="icon icon_pinwall_house_icon"></i><span>Home</span></a></li>
-						<li><a href="#"><i class="icon icon_pinwall_balloon_icon"></i><span>Events</span></a></li>
-						<li><a href="#"><i class="icon icon_pinwall_book_icon"></i><span>Lessons</span></a></li>
-						<li><a href="#"><i class="icon icon_pinwall_heart_icon"></i><span>Wellness</span></a></li>
-						<li><a href="#"><i class="icon icon_pinwall_more_icon"></i><span>More</span></a></li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 	</header>
@@ -60,7 +80,7 @@
 				</div>
 
 				<div class="projectsList">
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>House Cleaning (Recurring)</p>
@@ -68,7 +88,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Law Mowing and Lawncare</p>
@@ -76,7 +96,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Interior Design</p>
@@ -84,7 +104,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Handyman</p>
@@ -92,7 +112,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>House Cleaning (Recurring)</p>
@@ -100,7 +120,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Law Mowing and Lawncare</p>
@@ -108,7 +128,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Interior Design</p>
@@ -116,7 +136,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Handyman</p>
@@ -124,7 +144,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>House Cleaning (Recurring)</p>
@@ -132,7 +152,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Law Mowing and Lawncare</p>
@@ -140,7 +160,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Interior Design</p>
@@ -148,7 +168,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Handyman</p>
@@ -156,7 +176,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>House Cleaning (Recurring)</p>
@@ -164,7 +184,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Law Mowing and Lawncare</p>
@@ -172,7 +192,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Interior Design</p>
@@ -180,7 +200,7 @@
 					</div>
 					<!-- end project -->
 
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<a href="#" class="project">
 							<img src="../img/categoryPage/pinwall_servicePlaceholder_img.png" alt="">
 							<p>Handyman</p>
@@ -192,30 +212,28 @@
 			</div>
 		</div>
 	</section>
-	<!-- end mainContent -->
+	<!-- end popularProjects -->
 
 	<section class="projectForm">
-		<div class="dtc">
-			<div class="container">
-				<div class="row">
-					<div class="full_height col-lg-5 col-lg-offset-1">
-						<h4>Your project isn’t on the list?</h4>
-						<p>Tell us what you want to do, and we will find just the right guy for your need!</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 img_right">
+					<img src="img/categoryPage/pinwall_addService_img.png" alt="">
+				</div>
+				
+				<div class="full_height col-lg-5 col-lg-offset-1 col-md-6">
+					<h4>Your project isn’t on the list?</h4>
+					<p>Tell us what you want to do, and we will find just the right guy for your need!</p>
 
-						<form>
-							<input type="text" placeholder="Just a few words...">
-							<button><span>This is what I'm looking for</span></button>
-						</form>
-					</div>
-
-					<div class="col-lg-6">
-						<img src="img/categoryPage/pinwall_addService_img.png" alt="">
-					</div>
+					<form class="lookfor">
+						<input type="text" name="fw" placeholder="Just a few words...">
+						<button><span>This is what I'm looking for</span></button>
+					</form>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- end dwnld -->
+	<!-- end projectForm -->
 
 	<footer>
 		<div class="container">
@@ -251,7 +269,9 @@
 	</footer>
 	<!-- end footer -->
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/retina.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

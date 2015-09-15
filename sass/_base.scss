@@ -37,7 +37,7 @@ body{
 hr{
 	width: 100%;
 	height: 1px;
-	background: #979797;
+	background: $gray2;
 	margin: 0;
 	padding: 0;
 }
@@ -77,7 +77,7 @@ hr{
 	height: 100%;
 }
 
-input,
+input[type="text"],
 textarea{
 	width: 100%;
 	height: 70px;
@@ -91,17 +91,277 @@ textarea{
 	border: 1px solid $gray2;
 	box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.5);
 	resize: none;
+	border-radius: 0;
 
 		&.no_border{
 			box-shadow: none;
 			border: none;
 		}
+
+		&.b_only{
+			border: 1px solid #CDCDCD;
+			box-shadow: none;
+		}
+
+		&.error{
+			box-shadow: inset 0 0 0 3px $red;
+		}
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-  margin:0;
+textarea{
+	padding-top: 10px;
+}
+
+.fieldWrap{
+	margin-bottom: 50px;
+
+		.checkBox{
+			border: 1px solid #F0F0F0;
+		}
+}
+
+.checkWrap{
+	background: #FBFBFB;
+	position: relative;
+	border-bottom: 1px solid #F0F0F0;
+	min-height: 60px;
+
+		&:last-child{
+			border-bottom: none;
+		}
+
+		input{
+			visibility: hidden;
+			position: absolute;
+			left: -90000px;
+
+				&:checked + label{
+					background: #F3F3F3;
+
+						&:after{
+							display: none;
+						}
+
+						span{
+							background: $blue;
+							border-color: $blue;
+
+								&:before{
+									display: block;
+								}
+						}
+				}
+		}
+
+		label{
+			cursor: pointer;
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding-left: 60px;
+			min-height: 60px;
+
+				&:after{
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					background-color: transparent;
+					z-index: 20;
+					display: block;
+				}
+
+				span{
+					display: block;
+					width: 20px;
+					height: 20px;
+					border-radius: 4px;
+					border: 1px solid #CDCDCD;
+					background: #fff;
+					position: absolute;
+					left: 20px;
+					top: 20px;
+
+						&:before{
+							content: "\e600";
+							font-family: 'pinwall_icons';
+					    speak: none;
+					    font-style: normal;
+					    font-weight: normal;
+					    font-variant: normal;
+					    text-transform: none;
+					    line-height: 1;
+					    -webkit-font-smoothing: antialiased;
+					    -moz-osx-font-smoothing: grayscale;
+					    position: absolute;
+					    width: 100%;
+					    height: 100%;
+					    text-align: center;
+					    color: #fff;
+					    line-height: 18px;
+					    font-size: $fz19;
+					    display: none;
+						}
+				}
+
+				p{
+					font-size: $fz16;
+					font-weight: 600;
+					line-height: 20px;
+					padding: 20px 0;
+				}
+
+				textarea{
+					padding: 8px 0 0 10px;
+					width: calc(100% - 20px);
+					margin: 20px 0;
+				}
+		}
+
+		&.withDD{
+			label{
+				padding-bottom: 80px;
+
+					&:after{
+						z-index: 22;
+					}
+			}
+
+			.DropDown{
+				z-index: 21;
+				background: #fff;
+				width: calc(100% - 40px);
+				left: 20px;
+				bottom: 21px;
+				position: absolute;
+			}
+		}
+}
+
+.DropDown{
+	height: 60px;
+	box-shadow: 0 0 0 1px #F0F0F0;
+	width: 100%;
+	background: #FBFBFB;
+	cursor: pointer;
+	position: relative;
+
+		.currentItem{
+			width: 100%;
+			height: 100%;
+			line-height: 20px;
+			padding: 20px;
+			font-size: $fz16;
+			font-weight: 300;
+			color: $gray;
+			position: relative;
+
+				&:before{
+					content: '';
+					position: absolute;
+					top: 21px;
+					right: 26px;
+					border: 5px solid transparent;
+					border-top: none;
+					border-bottom: 8px solid $gray;
+				}
+
+				&:after{
+					content: '';
+					position: absolute;
+					bottom: 21px;
+					right: 26px;
+					border: 5px solid transparent;
+					border-bottom: none;
+					border-top: 8px solid $gray;
+				}
+
+				p{
+					font-weight: 600;
+					color: $black;
+
+					span{
+						font-weight: 300;
+					}
+				}
+		}
+
+		.ddlist{
+			display: none;
+			position: absolute;
+			width: 100%;
+			background: #FBFBFB;
+			box-shadow: 0 0 0 1px #F0F0F0;
+			line-height: 20px;
+			padding: 0;
+			z-index: 2;
+
+				li{
+					list-style: none;
+					border-bottom: 1px solid #F0F0F0;
+
+						p{
+							padding: 20px;
+							font-weight: 600;
+
+								span{
+									font-weight: 300;
+								}
+						}
+				}
+		}
+
+		&.opened{
+			.ddlist{
+				display: block;
+			}
+		}
+}
+
+.radioBox{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20px;
+	padding-left: 10px;
+
+		input{
+			visibility: hidden;
+			left: -99999px;
+			position: absolute;
+
+				&:checked + label{
+					span{
+						border: 5px solid $blue;
+						background: #fff;
+					}
+				}
+		}
+
+		label{
+			line-height: 20px;
+			position: relative;
+			cursor: pointer;
+			overflow: hidden;
+
+			span{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				display: block;
+				background: #FBFBFB;
+				border: 1px solid #CDCDCD;
+				float: left;
+				margin-right: 10px;
+			}
+
+			p{
+				font-size: $fz16;
+				font-weight: 600;
+				float: left;
+			}
+		}
 }
 
 button{
@@ -111,6 +371,12 @@ button{
 	background: $blue;
 	border: none;
 	float: left;
+	opacity: 0.9;
+	position: relative;
+
+		&:hover{
+			opacity: 1;
+		}
 
 		span{
 			color: #fff;
@@ -130,6 +396,18 @@ button{
 					border-right: none;
 					border-left: 8px solid #fff;
 				}
+		}
+
+		&.green{
+			background: $green;
+		}
+
+		&.no_arrow{
+			span{
+				&:after{
+					display: none;
+				}
+			}
 		}
 }
 
@@ -170,12 +448,119 @@ header{
 			margin-top: 40px;
 
 				input{
-					margin-right: 10px;
 					max-width: 430px;
+					margin-right: 10px;
 
 						&.zip{
+							margin-right: 10px;
 							max-width: 135px;
 						}
+				}
+
+				.DropDown{
+					margin-right: 10px;
+					max-width: 430px;
+					height: 70px;
+					float: left;
+
+						.currentItem{
+							line-height: 30px;
+							font-size: $fz22;
+
+								&:before{
+									top: 25px;
+								}
+
+								&:after{
+									bottom: 25px;
+								}
+
+								p{
+									font-size: $fz22;
+								}
+						}
+
+						.ddlist{
+							li{
+								p{
+									color: #000;
+								}
+							}
+						}
+				}
+
+				.errorText{
+					text-align: center;
+					padding-top: 25px;
+					color: #fff;
+					font-size: $fz16;
+					font-weight: 600;
+					display: none;
+
+						a{
+							color: $blue;
+						}
+				}
+
+				&.zip_error{
+					.errorText{
+						display: block;
+					}
+
+					button:after{
+						display: block;
+					}
+
+					&.invalid{
+						.DropDown{
+							box-shadow: inset 0 0 0 3px $red;
+						}
+					}
+				}
+
+				&.invalid{
+					.DropDown{
+						box-shadow: inset 0 0 0 3px $red;
+					}
+
+					.zip{
+						box-shadow: inset 0 0 0 3px $red;
+					}
+
+						&.valid{
+							.zip{
+								box-shadow: none;
+							}
+						}
+
+						&.selected{
+							.DropDown{
+								box-shadow: none;
+							}
+						}
+				}
+
+				button{
+					&:after{
+						content: 'Sorry, we just can’t :(';
+						font-size: $fz22;
+						font-weight: 200;
+						line-height: 70px;
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						background: $red;
+						left: 0;
+						top: 0;
+						color: #fff;
+						display: none;
+					}
+				}
+
+				&#lp_form{
+					.DropDown{
+						max-width: 575px;
+					}
 				}
 		}
 
@@ -196,7 +581,7 @@ header{
 					li{
 						display: inline-block;
 						vertical-align: top;
-						margin-left: 60px;
+						margin-right: 60px;
 						list-style: none;
 						line-height: 100px;
 						height: 100%;
@@ -205,8 +590,8 @@ header{
 							display: block;
 						}
 
-							&:first-child{
-								margin-left: 0;
+							&:last-child{
+								margin-right: 0;
 							}
 
 							i.icon{
@@ -230,12 +615,20 @@ header{
 		&.altheader{
 			padding-bottom: 100px;
 
+				&.no_nav{
+					padding-bottom: 0;
+				}
+
 			.logo{
 				background: #fff;
 				color: #000;
 				height: 130px;
 				line-height: 130px;
 				padding-top: 0;
+
+					&.gray{
+						background: #FBFBFB;
+					}
 			}
 
 			nav{
@@ -243,6 +636,16 @@ header{
 				top: 130px;
 			}
 		}
+}
+
+label.error{
+	display: none !important;
+	position: absolute;
+	left: -999999px;
+}
+
+.menu_toggle_button{
+	display: none;
 }
 
 footer{
@@ -261,18 +664,17 @@ footer{
 		.logo{
 			display: inline-block;
 			vertical-align: bottom;
+			font-size: $fz65;
 			line-height: 1;
 
 				i{
 					color: $blue;
-					font-size: $fz65;
 					margin-right: 15px;
 				}
 
 
 				span{
 					font-weight: 200;
-					font-size: $fz65;
 					color: $black;
 				}
 		}
@@ -307,6 +709,10 @@ footer{
 
 					li{
 						margin-right: 50px;
+
+							&:last-child{
+								margin-right: 0;
+							}
 
 							a{
 								font-size: $fz16;

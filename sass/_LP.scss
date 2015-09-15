@@ -46,6 +46,20 @@ header.lp{
 					line-height: 1.4;
 					padding: 0 10px;
 				}
+
+				.iconsWrap{
+					margin-top: 40px;
+					overflow: hidden;
+
+						.icon{
+							float: left;
+							margin-right: 40px;
+
+								&:last-child{
+									margin-right: 0;
+								}
+						}
+				}
 		}
 }
 
@@ -63,6 +77,14 @@ header.lp{
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
+		}
+
+		.buttons{
+			margin-top: 90px;
+
+				a:first-child{
+					margin-right: 70px;
+				}
 		}
 }
 

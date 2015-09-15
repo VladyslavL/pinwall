@@ -29,6 +29,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/ForPros.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ForPros.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/img\/categoryPage\/pinwall_addService_img.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -84,6 +93,149 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/forPros\/pinwall_hero3_img.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 147362,
+		"inputAbbreviatedPath": "\/img\/forPros\/pinwall_hero3_img.jpg",
+		"outputAbbreviatedPath": "\/img\/forPros\/pinwall_hero3_img.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/contact.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3039,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/contact.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/contact.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/contact@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6601,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/contact@2x.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/contact@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/message.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3178,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/message.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/message.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/message@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6820,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/message@2x.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/message@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/profile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3787,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/profile.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/profile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/profile@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8706,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/profile@2x.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/profile@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/quote.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3177,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/quote.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/quote.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/quote@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7096,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/quote@2x.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/quote@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/reviews.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3572,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/reviews.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/reviews.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/compare_icons\/reviews@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8364,
+		"inputAbbreviatedPath": "\/img\/LP\/compare_icons\/reviews@2x.png",
+		"outputAbbreviatedPath": "\/img\/LP\/compare_icons\/reviews@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/pinwall_app_store_icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3534,
+		"inputAbbreviatedPath": "\/img\/LP\/pinwall_app_store_icon.png",
+		"outputAbbreviatedPath": "\/img\/LP\/pinwall_app_store_icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/pinwall_app_store_icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7577,
+		"inputAbbreviatedPath": "\/img\/LP\/pinwall_app_store_icon@2x.png",
+		"outputAbbreviatedPath": "\/img\/LP\/pinwall_app_store_icon@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/LP\/pinwall_compare_img.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -95,13 +247,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/LP\/pinwall_compare_img_@2x.png": {
+	"\/img\/LP\/pinwall_compare_img@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 105147,
-		"inputAbbreviatedPath": "\/img\/LP\/pinwall_compare_img_@2x.png",
-		"outputAbbreviatedPath": "\/img\/LP\/pinwall_compare_img_@2x.png",
+		"inputAbbreviatedPath": "\/img\/LP\/pinwall_compare_img@2x.png",
+		"outputAbbreviatedPath": "\/img\/LP\/pinwall_compare_img@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -124,6 +276,28 @@
 		"initialSize": 92794,
 		"inputAbbreviatedPath": "\/img\/LP\/pinwall_getIntroduced_img@2x.png",
 		"outputAbbreviatedPath": "\/img\/LP\/pinwall_getIntroduced_img@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/pinwall_google_play_icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4822,
+		"inputAbbreviatedPath": "\/img\/LP\/pinwall_google_play_icon.png",
+		"outputAbbreviatedPath": "\/img\/LP\/pinwall_google_play_icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/LP\/pinwall_google_play_icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11644,
+		"inputAbbreviatedPath": "\/img\/LP\/pinwall_google_play_icon@2x.png",
+		"outputAbbreviatedPath": "\/img\/LP\/pinwall_google_play_icon@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -212,7 +386,7 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 0
 		},
 	"\/js\/min\/main-min.js": {
 		"fileType": 64,
@@ -241,6 +415,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/LandingPage.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/OrderFormPage.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/OrderFormPage.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -334,6 +517,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
+	"\/sass\/_forProsPage.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/_forProsPage.scss",
+		"outputAbbreviatedPath": "\/css\/_forProsPage.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
 	"\/sass\/_LP.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
@@ -343,6 +542,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/_LP.scss",
 		"outputAbbreviatedPath": "\/css\/_LP.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
+	"\/sass\/_orderForm.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/_orderForm.scss",
+		"outputAbbreviatedPath": "\/css\/_orderForm.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

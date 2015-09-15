@@ -4,6 +4,7 @@
 header.cp{
 	height: 630px;
 	background-image: url(../img/categoryPage/pinwall_hero2_img_1x.jpg);
+	padding-bottom: 0;
 
 		h1{
 			margin-top: 140px;
@@ -69,8 +70,8 @@ header.cp{
 		input{
 			margin-bottom: 20px;
 		}
+
+		.img_right{
+			float: right;
+		}
 }
-
-
-
-

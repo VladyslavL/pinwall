@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*=================================
 =            VARIABLES            =
 =================================*/
@@ -979,9 +980,6 @@ hr {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon_pinwall_balloon_icon:before {
-  content: "\e606"; }
-
 .icon_checkmark:before {
   content: "\e600"; }
 
@@ -999,6 +997,15 @@ hr {
 
 .icon_pinwall_more_icon:before {
   content: "\e605"; }
+
+.icon_pinwall_balloon_icon:before {
+  content: "\e606"; }
+
+.icon_hamburger_menu_close:before {
+  content: "\e607"; }
+
+.icon_hamburger_menu:before {
+  content: "\e608"; }
 
 /*===================================
 =            BASE STYLES            =
@@ -1035,7 +1042,7 @@ body {
 hr {
   width: 100%;
   height: 1px;
-  background: #979797;
+  background: #CDCDCD;
   margin: 0;
   padding: 0; }
 
@@ -1067,7 +1074,7 @@ hr {
 .full_height {
   height: 100%; }
 
-input,
+input[type="text"],
 textarea {
   width: 100%;
   height: 70px;
@@ -1080,16 +1087,202 @@ textarea {
   border: none;
   border: 1px solid #CDCDCD;
   box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.5);
-  resize: none; }
-  input.no_border,
+  resize: none;
+  border-radius: 0; }
+  input[type="text"].no_border,
   textarea.no_border {
     box-shadow: none;
     border: none; }
+  input[type="text"].b_only,
+  textarea.b_only {
+    border: 1px solid #CDCDCD;
+    box-shadow: none; }
+  input[type="text"].error,
+  textarea.error {
+    box-shadow: inset 0 0 0 3px #E86B6B; }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
+textarea {
+  padding-top: 10px; }
+
+.fieldWrap {
+  margin-bottom: 50px; }
+  .fieldWrap .checkBox {
+    border: 1px solid #F0F0F0; }
+
+.checkWrap {
+  background: #FBFBFB;
+  position: relative;
+  border-bottom: 1px solid #F0F0F0;
+  min-height: 60px; }
+  .checkWrap:last-child {
+    border-bottom: none; }
+  .checkWrap input {
+    visibility: hidden;
+    position: absolute;
+    left: -90000px; }
+    .checkWrap input:checked + label {
+      background: #F3F3F3; }
+      .checkWrap input:checked + label:after {
+        display: none; }
+      .checkWrap input:checked + label span {
+        background: #2ac7ee;
+        border-color: #2ac7ee; }
+        .checkWrap input:checked + label span:before {
+          display: block; }
+  .checkWrap label {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+    min-height: 60px; }
+    .checkWrap label:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: transparent;
+      z-index: 20;
+      display: block; }
+    .checkWrap label span {
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid #CDCDCD;
+      background: #fff;
+      position: absolute;
+      left: 20px;
+      top: 20px; }
+      .checkWrap label span:before {
+        content: "\e600";
+        font-family: 'pinwall_icons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        line-height: 18px;
+        font-size: 1.188rem;
+        display: none; }
+    .checkWrap label p {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 20px;
+      padding: 20px 0; }
+    .checkWrap label textarea {
+      padding: 8px 0 0 10px;
+      width: calc(100% - 20px);
+      margin: 20px 0; }
+  .checkWrap.withDD label {
+    padding-bottom: 80px; }
+    .checkWrap.withDD label:after {
+      z-index: 22; }
+  .checkWrap.withDD .DropDown {
+    z-index: 21;
+    background: #fff;
+    width: calc(100% - 40px);
+    left: 20px;
+    bottom: 21px;
+    position: absolute; }
+
+.DropDown {
+  height: 60px;
+  box-shadow: 0 0 0 1px #F0F0F0;
+  width: 100%;
+  background: #FBFBFB;
+  cursor: pointer;
+  position: relative; }
+  .DropDown .currentItem {
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #9B9B9B;
+    position: relative; }
+    .DropDown .currentItem:before {
+      content: '';
+      position: absolute;
+      top: 21px;
+      right: 26px;
+      border: 5px solid transparent;
+      border-top: none;
+      border-bottom: 8px solid #9B9B9B; }
+    .DropDown .currentItem:after {
+      content: '';
+      position: absolute;
+      bottom: 21px;
+      right: 26px;
+      border: 5px solid transparent;
+      border-bottom: none;
+      border-top: 8px solid #9B9B9B; }
+    .DropDown .currentItem p {
+      font-weight: 600;
+      color: #4A4A4A; }
+      .DropDown .currentItem p span {
+        font-weight: 300; }
+  .DropDown .ddlist {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #FBFBFB;
+    box-shadow: 0 0 0 1px #F0F0F0;
+    line-height: 20px;
+    padding: 0;
+    z-index: 2; }
+    .DropDown .ddlist li {
+      list-style: none;
+      border-bottom: 1px solid #F0F0F0; }
+      .DropDown .ddlist li p {
+        padding: 20px;
+        font-weight: 600; }
+        .DropDown .ddlist li p span {
+          font-weight: 300; }
+  .DropDown.opened .ddlist {
+    display: block; }
+
+.radioBox {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-left: 10px; }
+  .radioBox input {
+    visibility: hidden;
+    left: -99999px;
+    position: absolute; }
+    .radioBox input:checked + label span {
+      border: 5px solid #2ac7ee;
+      background: #fff; }
+  .radioBox label {
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; }
+    .radioBox label span {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: block;
+      background: #FBFBFB;
+      border: 1px solid #CDCDCD;
+      float: left;
+      margin-right: 10px; }
+    .radioBox label p {
+      font-size: 1rem;
+      font-weight: 600;
+      float: left; }
 
 button {
   width: 100%;
@@ -1097,7 +1290,11 @@ button {
   height: 70px;
   background: #2ac7ee;
   border: none;
-  float: left; }
+  float: left;
+  opacity: 0.9;
+  position: relative; }
+  button:hover {
+    opacity: 1; }
   button span {
     color: #fff;
     line-height: 70px;
@@ -1114,6 +1311,10 @@ button {
       border: 5px solid transparent;
       border-right: none;
       border-left: 8px solid #fff; }
+  button.green {
+    background: #9ADC34; }
+  button.no_arrow span:after {
+    display: none; }
 
 header {
   background-position: center center;
@@ -1141,10 +1342,65 @@ header {
     padding: 20px;
     margin-top: 40px; }
     header form input {
-      margin-right: 10px;
-      max-width: 430px; }
+      max-width: 430px;
+      margin-right: 10px; }
       header form input.zip {
+        margin-right: 10px;
         max-width: 135px; }
+    header form .DropDown {
+      margin-right: 10px;
+      max-width: 430px;
+      height: 70px;
+      float: left; }
+      header form .DropDown .currentItem {
+        line-height: 30px;
+        font-size: 1.375rem; }
+        header form .DropDown .currentItem:before {
+          top: 25px; }
+        header form .DropDown .currentItem:after {
+          bottom: 25px; }
+        header form .DropDown .currentItem p {
+          font-size: 1.375rem; }
+      header form .DropDown .ddlist li p {
+        color: #000; }
+    header form .errorText {
+      text-align: center;
+      padding-top: 25px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      display: none; }
+      header form .errorText a {
+        color: #2ac7ee; }
+    header form.zip_error .errorText {
+      display: block; }
+    header form.zip_error button:after {
+      display: block; }
+    header form.zip_error.invalid .DropDown {
+      box-shadow: inset 0 0 0 3px #E86B6B; }
+    header form.invalid .DropDown {
+      box-shadow: inset 0 0 0 3px #E86B6B; }
+    header form.invalid .zip {
+      box-shadow: inset 0 0 0 3px #E86B6B; }
+    header form.invalid.valid .zip {
+      box-shadow: none; }
+    header form.invalid.selected .DropDown {
+      box-shadow: none; }
+    header form button:after {
+      content: 'Sorry, we just can’t :(';
+      font-size: 1.375rem;
+      font-weight: 200;
+      line-height: 70px;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #E86B6B;
+      left: 0;
+      top: 0;
+      color: #fff;
+      display: none; }
+    header form#lp_form .DropDown {
+      max-width: 575px; }
   header nav {
     height: 100px;
     width: 100%;
@@ -1160,14 +1416,14 @@ header {
       header nav ul li {
         display: inline-block;
         vertical-align: top;
-        margin-left: 60px;
+        margin-right: 60px;
         list-style: none;
         line-height: 100px;
         height: 100%; }
         header nav ul li a {
           display: block; }
-        header nav ul li:first-child {
-          margin-left: 0; }
+        header nav ul li:last-child {
+          margin-right: 0; }
         header nav ul li i.icon {
           font-size: 1.938rem;
           margin-right: 20px;
@@ -1181,15 +1437,27 @@ header {
           font-weight: 300; }
   header.altheader {
     padding-bottom: 100px; }
+    header.altheader.no_nav {
+      padding-bottom: 0; }
     header.altheader .logo {
       background: #fff;
       color: #000;
       height: 130px;
       line-height: 130px;
       padding-top: 0; }
+      header.altheader .logo.gray {
+        background: #FBFBFB; }
     header.altheader nav {
       bottom: auto;
       top: 130px; }
+
+label.error {
+  display: none !important;
+  position: absolute;
+  left: -999999px; }
+
+.menu_toggle_button {
+  display: none; }
 
 footer {
   background: #fff;
@@ -1202,14 +1470,13 @@ footer {
   footer .logo {
     display: inline-block;
     vertical-align: bottom;
+    font-size: 4.063rem;
     line-height: 1; }
     footer .logo i {
       color: #2ac7ee;
-      font-size: 4.063rem;
       margin-right: 15px; }
     footer .logo span {
       font-weight: 200;
-      font-size: 4.063rem;
       color: #4A4A4A; }
   footer .footerMenu {
     font-size: 0;
@@ -1233,6 +1500,8 @@ footer {
       text-align: right; }
       footer .footerMenu.sec li {
         margin-right: 50px; }
+        footer .footerMenu.sec li:last-child {
+          margin-right: 0; }
         footer .footerMenu.sec li a {
           font-size: 1rem;
           color: #CDCDCD; }
@@ -1279,6 +1548,14 @@ header.lp {
       font-size: 1.375rem;
       line-height: 1.4;
       padding: 0 10px; }
+    .mainContent .contentBlock .iconsWrap {
+      margin-top: 40px;
+      overflow: hidden; }
+      .mainContent .contentBlock .iconsWrap .icon {
+        float: left;
+        margin-right: 40px; }
+        .mainContent .contentBlock .iconsWrap .icon:last-child {
+          margin-right: 0; }
 
 /*=============================
 =            DWNLD            =
@@ -1293,6 +1570,10 @@ header.lp {
     display: table-cell;
     vertical-align: middle;
     text-align: center; }
+  .dwnld .buttons {
+    margin-top: 90px; }
+    .dwnld .buttons a:first-child {
+      margin-right: 70px; }
 
 /*===============================================
 =            STYLES FOR CATEGORYPAGE            =
@@ -1302,7 +1583,8 @@ header.lp {
 ==============================*/
 header.cp {
   height: 630px;
-  background-image: url(../img/categoryPage/pinwall_hero2_img_1x.jpg); }
+  background-image: url(../img/categoryPage/pinwall_hero2_img_1x.jpg);
+  padding-bottom: 0; }
   header.cp h1 {
     margin-top: 140px; }
 
@@ -1352,6 +1634,8 @@ header.cp {
     text-align: left; }
   .projectForm input {
     margin-bottom: 20px; }
+  .projectForm .img_right {
+    float: right; }
 
 /*=============================================
 =            STYLES FOR OTHER PAGE            =
@@ -1367,7 +1651,8 @@ header.cp {
     font-weight: 600;
     font-size: 1.375rem; }
   .otherPageContent form {
-    padding-top: 100px; }
+    padding-top: 100px;
+    overflow: hidden; }
     .otherPageContent form p {
       font-size: 1.375rem;
       margin-bottom: 20px;
@@ -1420,7 +1705,7 @@ header.cp {
     .privacyPolicy .textBlock p {
       font-size: 1.375rem;
       margin-bottom: 30px;
-      line-height: 32px; }
+      line-height: 1.3; }
       .privacyPolicy .textBlock p:last-child {
         margin-bottom: 0; }
     .privacyPolicy .textBlock h3 {
@@ -1431,11 +1716,505 @@ header.cp {
       font-weight: 600;
       margin-bottom: 30px; }
 
+/*===============================================
+=            STYLES FOR FORPROS PAGE            =
+===============================================*/
+/*==============================
+=            HEADER            =
+==============================*/
+header.fp {
+  background-image: url(../img/forPros/pinwall_hero3_img.jpg);
+  padding-bottom: 45px; }
+  header.fp h1 {
+    margin-top: 100px; }
+  header.fp form input {
+    max-width: 575px; }
+    header.fp form input.fll {
+      width: calc(50% - 5px);
+      float: left;
+      margin-bottom: 20px; }
+      header.fp form input.fll.last {
+        margin-right: 0 !important; }
+
+/*=================================
+=            HOWITWORK            =
+=================================*/
+.howitwork {
+  padding-top: 100px; }
+  .howitwork .largeText {
+    margin-bottom: 40px; }
+  .howitwork .step {
+    margin-bottom: 100px; }
+    .howitwork .step .stepNumber {
+      display: block;
+      width: 176px;
+      height: 176px;
+      border-radius: 50%;
+      border: 1px solid #9ADC34;
+      text-align: center;
+      line-height: 176px;
+      font-size: 4.063rem;
+      color: #9ADC34;
+      margin: 0 auto;
+      font-weight: 600; }
+    .howitwork .step h3 {
+      font-size: 1.375rem;
+      font-weight: 600;
+      margin-bottom: 35px; }
+    .howitwork .step .list li {
+      list-style: none;
+      position: relative;
+      padding-left: 65px;
+      margin-bottom: 30px; }
+      .howitwork .step .list li i {
+        position: absolute;
+        color: #9ADC34;
+        font-size: 1.938rem;
+        line-height: 17px;
+        left: 5px;
+        top: 5px; }
+      .howitwork .step .list li p {
+        font-size: 1.375rem;
+        line-height: 1.3; }
+  .howitwork .stepSeparator {
+    width: 100%;
+    height: 1px;
+    background: #F3F3F3;
+    margin-bottom: 100px;
+    position: relative; }
+    .howitwork .stepSeparator span {
+      width: 77px;
+      height: 1px;
+      background: #fff;
+      margin: 0 auto;
+      display: block;
+      position: relative; }
+      .howitwork .stepSeparator span:before {
+        content: '';
+        position: absolute;
+        border: 12px solid transparent;
+        border-top: 12px solid #9B9B9B;
+        border-bottom: none;
+        margin-left: -12px;
+        left: 50%;
+        top: -6px; }
+      .howitwork .stepSeparator span:after {
+        content: '';
+        position: absolute;
+        border: 12px solid transparent;
+        border-top: 12px solid #fff;
+        border-bottom: none;
+        margin-left: -12px;
+        left: 50%;
+        top: -7px; }
+
+/*==================================
+=            APPSERVICE            =
+==================================*/
+.appService {
+  padding: 100px 0;
+  background: #FBFBFB; }
+  .appService .largeText {
+    font-size: 2.438rem; }
+  .appService .subText {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 115px; }
+  .appService .var {
+    margin-bottom: 100px;
+    padding-left: 110px;
+    position: relative; }
+    .appService .var:before {
+      content: '';
+      width: 21px;
+      height: 21px;
+      position: absolute;
+      background: #9ADC34;
+      left: 40px;
+      top: 0;
+      border-radius: 50%; }
+    .appService .var h4 {
+      font-size: 1.375rem;
+      font-weight: 600; }
+    .appService .var p {
+      font-size: 1.375rem;
+      margin-top: 30px;
+      font-weight: 300;
+      line-height: 1.3; }
+      .appService .var p:first-child {
+        margin-top: 0; }
+
+/*=================================================
+=            STYLES FOR ORDERFORM PAGE            =
+=================================================*/
+/*=================================
+=            ORDERFORM            =
+=================================*/
+.orderForm {
+  padding: 50px 0; }
+  .orderForm .largeText {
+    font-size: 2.438rem; }
+  .orderForm .subText {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 90px; }
+  .orderForm .mainForm .fieldWrap.selected p.head i.icon_checkmark {
+    display: inline-block; }
+  .orderForm .mainForm .fieldWrap.invalid_child p.head i.icon_hamburger_menu_close {
+    display: inline-block;
+    color: #E86B6B; }
+  .orderForm .mainForm .fieldWrap p.head {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0 0 10px 10px; }
+    .orderForm .mainForm .fieldWrap p.head i {
+      margin-left: 10px;
+      color: #9ADC34;
+      display: none; }
+  .orderForm .mainForm .fieldWrap textarea {
+    height: 180px; }
+  .orderForm .mainForm .fieldWrap textarea,
+  .orderForm .mainForm .fieldWrap input,
+  .orderForm .mainForm .fieldWrap button {
+    float: none;
+    text-align: left; }
+  .orderForm .mainForm .fieldWrap button {
+    text-align: center; }
+  .orderForm .mainForm .fieldWrap input {
+    padding-left: 20px; }
+  .orderForm .mainForm .fieldWrap .form {
+    border: 1px solid #9B9B9B;
+    padding: 40px 50px;
+    text-align: center; }
+    .orderForm .mainForm .fieldWrap .form .field {
+      margin-bottom: 45px; }
+      .orderForm .mainForm .fieldWrap .form .field label {
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 0 0 10px 15px;
+        display: block;
+        text-align: left; }
+      .orderForm .mainForm .fieldWrap .form .field.half {
+        width: calc(50% - 10px);
+        float: left; }
+        .orderForm .mainForm .fieldWrap .form .field.half:first-child {
+          margin-right: 20px; }
+    .orderForm .mainForm .fieldWrap .form p {
+      color: #9B9B9B;
+      font-size: 1rem;
+      font-weight: 300;
+      padding-top: 20px; }
+      .orderForm .mainForm .fieldWrap .form p a {
+        color: #2ac7ee; }
+  .orderForm .textBlock {
+    border-left: 1px solid #979797;
+    margin-left: 60px;
+    padding-left: 30px;
+    padding-right: 15px; }
+    .orderForm .textBlock p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #9B9B9B;
+      line-height: 1.3; }
+      .orderForm .textBlock p.head {
+        font-weight: 200;
+        line-height: 1;
+        color: #4A4A4A;
+        margin-bottom: 15px;
+        font-size: 1.375rem; }
+      .orderForm .textBlock p a {
+        color: #2ac7ee; }
+    .orderForm .textBlock .text:first-child {
+      margin-bottom: 40px; }
+
 /*=========================================
 =            RESPONSIVE STYLES            =
 =========================================*/
 @media screen and (max-width: 1200px) {
-  header form input {
-    max-width: 425px; } }
+  header form .DropDown {
+    max-width: 425px; }
+  header.fp form input,
+  header form#lp_form .DropDown {
+    max-width: 570px; }
+  .mainContent .contentBlock .pl {
+    padding-left: 15px; } }
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 14px; }
+  input[type="text"],
+  button {
+    height: 50px;
+    padding-left: 0;
+    text-align: center; }
+  button {
+    max-width: 100%; }
+    button span {
+      line-height: 50px; }
+  .DropDown {
+    height: 50px; }
+    .DropDown .currentItem {
+      padding: 15px 20px; }
+      .DropDown .currentItem:before {
+        top: 16px; }
+      .DropDown .currentItem:after {
+        bottom: 16px; }
+    .DropDown .ddlist li p {
+      padding: 15px 20px; }
+  header .menu_toggle_button {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+    z-index: 30;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 30;
+    display: block; }
+    header .menu_toggle_button i.icon_hamburger_menu_close {
+      display: none;
+      color: #4A4A4A; }
+  header.cp,
+  header.lp,
+  header.fp {
+    height: auto;
+    padding-bottom: 45px; }
+    header.cp h1,
+    header.lp h1,
+    header.fp h1 {
+      margin-top: 45px; }
+  header.fp form .field .fll {
+    width: 100%; }
+  header.nav_opened nav {
+    display: block; }
+  header.nav_opened .logo {
+    display: none; }
+  header.nav_opened .menu_toggle_button i.icon_hamburger_menu {
+    display: none; }
+  header.nav_opened .menu_toggle_button i.icon_hamburger_menu_close {
+    display: block; }
+  header.altheader {
+    padding-bottom: 0; }
+    header.altheader.cp,
+    header.altheader.lp,
+    header.altheader.fp {
+      height: auto;
+      padding-bottom: 45px; }
+    header.altheader .logo {
+      height: 100px;
+      line-height: 100px; }
+    header.altheader .menu_toggle_button i.icon_hamburger_menu {
+      color: #2ac7ee; }
+  header form input[type="text"],
+  header form .DropDown {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px; }
+  header form .DropDown {
+    height: 50px;
+    max-width: 100% !important; }
+    header form .DropDown .currentItem {
+      line-height: 20px; }
+      header form .DropDown .currentItem:before {
+        top: 15px; }
+      header form .DropDown .currentItem:after {
+        bottom: 15px; }
+  header form button:after {
+    line-height: 50px; }
+  header .logo {
+    padding-top: 0;
+    height: 100px;
+    line-height: 100px;
+    text-align: left;
+    padding: 0 35px; }
+  header nav {
+    bottom: auto;
+    top: 0;
+    padding-top: 100px;
+    height: auto;
+    background: #FBFBFB;
+    position: static;
+    display: none; }
+    header nav ul {
+      padding-top: 30px;
+      border-top: 1px solid #CDCDCD;
+      width: calc(100% - 70px);
+      margin: 0 auto; }
+      header nav ul li {
+        line-height: 50px;
+        margin-right: 50px;
+        margin-bottom: 35px;
+        height: 50px; }
+        header nav ul li i.icon {
+          line-height: 50px; }
+  footer {
+    text-align: center;
+    padding: 35px 0 25px;
+    height: auto;
+    line-height: normal; }
+    footer .logo {
+      margin-bottom: 10px; }
+    footer .footerBlock {
+      height: auto;
+      line-height: normal; }
+    footer .footerMenu.sec {
+      text-align: center; }
+    footer .footerMenu li {
+      line-height: 30px; }
+    footer.altfooter {
+      padding: 35px 0 25px 0; }
+  .mainContent .contentBlock {
+    display: block;
+    position: relative;
+    padding-top: 400px; }
+    .mainContent .contentBlock .pl {
+      padding-left: 0; }
+    .mainContent .contentBlock.leftImg {
+      padding-top: 0; }
+      .mainContent .contentBlock.leftImg .dtc.imgBlock {
+        position: static;
+        margin-bottom: 30px; }
+    .mainContent .contentBlock .dtc {
+      display: block;
+      width: 100%; }
+      .mainContent .contentBlock .dtc.imgBlock {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0; }
+  .popularProjects .project {
+    height: auto; }
+    .popularProjects .project img {
+      display: block;
+      width: 100%; }
+  .projectForm .img_right {
+    float: none;
+    margin-bottom: 40px; }
+  .successContent {
+    padding: 70px 0; }
+    .successContent .successImg {
+      width: 100%;
+      display: block;
+      margin-left: 0; }
+  .howitwork .step {
+    margin-bottom: 50px; }
+    .howitwork .step h3 {
+      margin-bottom: 15px; }
+    .howitwork .step .stepNumber {
+      margin-bottom: 30px; }
+  .howitwork .stepSeparator {
+    margin-bottom: 30px; }
+  .appService {
+    padding: 40px 0; }
+    .appService .subText {
+      margin-bottom: 75px; }
+    .appService .var {
+      padding-left: 45px;
+      margin-bottom: 45px; }
+      .appService .var:before {
+        width: 10px;
+        height: 10px;
+        left: 15px;
+        top: 5px; }
+  .orderForm .textBlock {
+    display: none; }
+  .orderForm .mainForm {
+    padding: 20px 0; }
+    .orderForm .mainForm .fieldWrap .form {
+      padding: 20px; }
+      .orderForm .mainForm .fieldWrap .form .field {
+        margin-bottom: 25px; }
+      .orderForm .mainForm .fieldWrap .form .field.half {
+        float: none;
+        width: 100%; }
+        .orderForm .mainForm .fieldWrap .form .field.half:first-child {
+          margin-right: 0; } }
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 12px; }
+  .largeText {
+    font-size: 2.438rem; }
+  .subText {
+    line-height: 1.3; }
+  header nav ul {
+    text-align: left; }
+    header nav ul li {
+      margin: 0;
+      width: 50%; }
+  footer .logo {
+    font-size: 2.438rem; }
+  .mainContent {
+    padding: 40px 0; }
+    .mainContent hr {
+      margin-top: 55px; }
+    .mainContent .contentBlock {
+      padding-top: 320px; }
+      .mainContent .contentBlock .dtc.imgBlock img {
+        max-width: 280px;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto; }
+      .mainContent .contentBlock .iconsWrap .icon {
+        margin-right: 6px; }
+        .mainContent .contentBlock .iconsWrap .icon img {
+          max-width: 54px;
+          display: block;
+          width: 100%;
+          height: auto;
+          margin: 0 auto; }
+  .dwnld {
+    height: auto;
+    padding: 50px 0; }
+    .dwnld .buttons {
+      margin-top: 45px; }
+      .dwnld .buttons a:first-child {
+        margin-right: 0;
+        margin-bottom: 30px;
+        display: block; }
+  .projectForm .img_right img {
+    max-width: 280px;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto; }
+  .popularProjects {
+    padding: 50px 0; }
+  .otherPageContent {
+    padding: 40px 0; }
+    .otherPageContent form {
+      padding-top: 40px; }
+      .otherPageContent form .clearfix {
+        float: none; }
+        .otherPageContent form .clearfix button {
+          width: calc(100% - 135px); }
+        .otherPageContent form .clearfix .zip {
+          margin-right: 10px; }
+  .privacyPolicy .textBlock {
+    margin-bottom: 40px; }
+  .howitwork {
+    padding-top: 50px; }
+    .howitwork .step .stepNumber {
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
+      font-size: 2.438rem; }
+    .howitwork .step .list li {
+      padding-left: 30px;
+      margin-bottom: 10px; }
+      .howitwork .step .list li i {
+        left: 0; }
+  .appService .subText {
+    margin-bottom: 30px; }
+  .appService .var {
+    padding-left: 30px; }
+    .appService .var:before {
+      left: 5px; }
+    .appService .var p {
+      margin-top: 10px; }
+  .orderForm {
+    padding-bottom: 0; }
+    .orderForm .subText {
+      margin-bottom: 30px; } }
 
 /*# sourceMappingURL=style.css.map */

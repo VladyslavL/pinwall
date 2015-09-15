@@ -1,0 +1,140 @@
+/*=================================
+=            ORDERFORM            =
+=================================*/
+.orderForm{
+	padding: 50px 0;
+
+	.largeText{
+		font-size: $fz39;
+	}
+
+	.subText{
+		font-size: $fz22;
+		font-weight: 600;
+		margin-bottom: 90px;
+	}
+
+	.mainForm{
+		.fieldWrap{
+
+			&.selected{
+				p.head{
+					i.icon_checkmark{
+						display: inline-block;
+					}
+				}
+			}
+
+			&.invalid_child{
+				p.head{
+					i.icon_hamburger_menu_close{
+						display: inline-block;
+						color: $red;
+					}
+				}
+			}
+
+			p.head{
+				font-weight: bold;
+				font-size: $fz16;
+				padding: 0 0 10px 10px;
+
+					i{
+						margin-left: 10px;
+						color: $green;
+						display: none;
+					}
+			}
+
+			textarea{
+				height: 180px;
+			}
+
+			textarea,
+			input,
+			button{
+				float: none;
+				text-align: left;
+			}
+
+			button{
+				text-align: center;
+			}
+
+			input{
+				padding-left: 20px;
+			}
+
+			.form{
+				border: 1px solid $gray;
+				padding: 40px 50px;
+				text-align: center;
+
+					.field{
+						margin-bottom: 45px;
+
+							label{
+								font-weight: bold;
+								font-size: $fz16;
+								padding: 0 0 10px 15px;
+								display: block;
+								text-align: left;
+							}
+
+							&.half{
+								width: calc(50% - 10px);
+								float: left;
+
+									&:first-child{
+										margin-right: 20px;
+									}
+							}
+					}
+
+					p{
+						color: $gray;
+						font-size: $fz16;
+						font-weight: 300;
+						padding-top: 20px;
+
+							a{
+								color: $blue;
+							}
+					}
+			}
+		}
+	}
+
+	.textBlock{
+		border-left: 1px solid #979797;
+		margin-left: 60px;
+		padding-left: 30px;
+		padding-right: 15px;
+
+			p{
+				font-size: $fz16;
+				font-weight: 300;
+				color: $gray;
+				line-height: 1.3;
+
+					&.head{
+						font-weight: 200;
+						line-height: 1;
+						color: $black;
+						margin-bottom: 15px;
+						font-size: $fz22;
+					}
+
+					a{
+						color: $blue;
+					}
+			}
+
+			.text{
+				&:first-child{
+					margin-bottom: 40px;
+				}
+			}
+	}
+}
+

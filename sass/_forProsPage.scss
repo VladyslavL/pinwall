@@ -1,0 +1,174 @@
+/*==============================
+=            HEADER            =
+==============================*/
+header.fp{
+	background-image: url(../img/forPros/pinwall_hero3_img.jpg);
+	padding-bottom: 45px;
+
+		h1{
+			margin-top: 100px;
+		}
+
+		form{
+			input{
+				max-width: 575px;
+					&.fll{
+						width: calc(50% - 5px);
+						float: left;
+						margin-bottom: 20px;
+
+							&.last{
+								margin-right: 0 !important;
+							}
+					}
+			}
+		}
+}
+
+/*=================================
+=            HOWITWORK            =
+=================================*/
+.howitwork{
+	padding-top: 100px;
+
+		.largeText{
+			margin-bottom: 40px;
+		}
+
+		.step{
+			margin-bottom: 100px;
+
+				.stepNumber{
+					display: block;
+					width: 176px;
+					height: 176px;
+					border-radius: 50%;
+					border: 1px solid $green;
+					text-align: center;
+					line-height: 176px;
+					font-size: $fz65;
+					color: $green;
+					margin: 0 auto;
+					font-weight: 600;
+				}
+
+				h3{
+					font-size: $fz22;
+					font-weight: 600;
+					margin-bottom: 35px;
+				}
+
+				.list{
+					li{
+						list-style: none;
+						position: relative;
+						padding-left: 65px;
+						margin-bottom: 30px;
+
+							i{
+								position: absolute;
+								color: $green;
+								font-size: $fz31;
+								line-height: 17px;
+								left: 5px;
+								top: 5px;
+							}
+
+							p{
+								font-size: $fz22;
+								line-height: 1.3;
+							}
+					}
+				}
+		}
+
+		.stepSeparator{
+			width: 100%;
+			height: 1px;
+			background: #F3F3F3;
+			margin-bottom: 100px;
+			position: relative;
+
+				span{
+					width: 77px;
+					height: 1px;
+					background: #fff;
+					margin: 0 auto;
+					display: block;
+					position: relative;
+
+						&:before{
+							content: '';
+							position: absolute;
+							border: 12px solid transparent;
+							border-top: 12px solid $gray;
+							border-bottom: none;
+							margin-left: -12px;
+							left: 50%;
+							top: -6px;
+						}
+
+						&:after{
+							content: '';
+							position: absolute;
+							border: 12px solid transparent;
+							border-top: 12px solid #fff;
+							border-bottom: none;
+							margin-left: -12px;
+							left: 50%;
+							top: -7px;
+						}
+				}
+		}
+}
+
+/*==================================
+=            APPSERVICE            =
+==================================*/
+.appService{
+	padding: 100px 0;
+	background: #FBFBFB;
+
+		.largeText{
+			font-size: $fz39;
+		}
+
+		.subText{
+			font-size: $fz22;
+			font-weight: 600;
+			margin-bottom: 115px;
+		}
+
+		.var{
+			margin-bottom: 100px;
+			padding-left: 110px;
+			position: relative;
+
+				&:before{
+					content: '';
+					width: 21px;
+					height: 21px;
+					position: absolute;
+					background: $green;
+					left: 40px;
+					top: 0;
+					border-radius: 50%;
+				}
+
+				h4{
+					font-size: $fz22;
+					font-weight: 600;
+				}
+
+				p{
+					font-size: $fz22;
+					margin-top: 30px;
+					font-weight: 300;
+					line-height: 1.3;
+
+						&:first-child{
+							margin-top: 0;
+						}
+				}
+		}
+}
