@@ -1250,8 +1250,10 @@ textarea {
         font-weight: 600; }
         .DropDown .ddlist li p span {
           font-weight: 300; }
-  .DropDown.opened .ddlist {
-    display: block; }
+  .DropDown.opened {
+    z-index: 25; }
+    .DropDown.opened .ddlist {
+      display: block; }
 
 .radioBox {
   position: relative;
@@ -1408,7 +1410,8 @@ header {
     bottom: 0;
     left: 0;
     background: rgba(251, 251, 251, 0.9);
-    overflow: hidden; }
+    overflow: hidden;
+    z-index: 2; }
     header nav ul {
       width: 100%;
       text-align: center;
